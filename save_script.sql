@@ -23,16 +23,16 @@ create table turma(
 
 create table horario(
 	pk int not null auto_increment, primary key(pk),
-	dia_semana varchar (255),
+	dia_semana date,
     posicao_aula varchar (255),
 	turma_fk int, foreign key(turma_fk) references turma(pk),
 	disciplina_fk int, foreign key(disciplina_fk) references disciplina(pk)
 );
 
-insert into professor ( nome,disciplina) values ("Fernanda", "Sociologia");
-insert into professor ( nome,disciplina) values ("Jonathan","Geografia");
-insert into professor ( nome,disciplina) values ("Karolina","Educação Financeira");
-insert into professor ( nome,disciplina) values ("Tiago","Quimica");
-insert into professor ( nome,disciplina) values ("Norberto", "Banco de Dados");
+insert into professor ( nome,cpf) values ("Fernanda", "123.456.789-00");
+insert into professor ( nome,cpf) values ("Jorge", "123.456.789-00");
+insert into professor ( nome,cpf) values ("Mateus", "123.456.789-00");
+insert into professor ( nome,cpf) values ("Jurema", "123.456.789-00");
+insert into professor ( nome,cpf) values ("Beatriz", "123.456.789-00");
 
-update professor set (disciplina= "Sociologia" where pk=0,
+update professor set (nome= "Jorge" where pk=2,
