@@ -5,49 +5,34 @@ use prova_bd;
 create table professor(
 	pk int not null auto_increment, primary key(pk),
     nome varchar(255) not null, 
-    disciplina varchar (255)
+    cpf varchar (45) not null
 );
 
-create table agenda_professor(
+create table disciplina(
 	pk int not null auto_increment, primary key(pk),
-    disciplina varchar (255),
-	horario_aula varchar (255),
-	aula_dia int,
+	nome varchar(255) not null, 
+    carga_horaria int,
 	professor_fk int, foreign key(professor_fk) references professor(pk)
 );
 
 create table turma(
 	pk int not null auto_increment, primary key(pk),
-    horario int ,
-	capacidade int 
+    nome varchar(255) ,
+	sala varchar(10) 
     );
 
-create table disciplina(
+create table horario(
 	pk int not null auto_increment, primary key(pk),
-	nome varchar(255) not null, 
-	professor varchar (255),
-    carga_horaria_total varchar (255),
-	professor_fk int, foreign key(professor_fk) references professor(pk),
-    turma_fk int, foreign key(turma_fk) references turma(pk)
-);
-
-create table grade_curricular(
-	pk int not null auto_increment, primary key(pk),
-	carga_horaria_total varchar (255),
+	dia_semana varchar (255),
+    posicao_aula varchar (255),
 	turma_fk int, foreign key(turma_fk) references turma(pk),
-	agenda_professor_fk int, foreign key(agenda_professor_fk) references agenda_professor(pk)
+	disciplina_fk int, foreign key(disciplina_fk) references disciplina(pk)
 );
 
-insert into professor(nome,disciplina)value("Felipe","Matemática");
-insert into professor(nome,disciplina)value("Leticia","História");
-insert into professor(nome,disciplina)value("Ana","Química");
-insert into professor(nome,disciplina)value("Norberto","Banco de Dados");
-insert into professor(nome,disciplina)value("Jessica","Front-end");
+insert into professor ( nome,disciplina) values ("Fernanda", "Sociologia");
+insert into professor ( nome,disciplina) values ("Jonathan","Geografia");
+insert into professor ( nome,disciplina) values ("Karolina","Educação Financeira");
+insert into professor ( nome,disciplina) values ("Tiago","Quimica");
+insert into professor ( nome,disciplina) values ("Norberto", "Banco de Dados");
 
-update professor set disciplina = "Matemática" where pk=1;
-
-select * from professor;
-
-insert into agenda_professor(disciplina, horario_aula, aula_dia, agenda_professor_fk)value("História","terceira aula",2,3);
-
-select * from agenda_professor;
+update professor set (disciplina= "Sociologia" where pk=0,
