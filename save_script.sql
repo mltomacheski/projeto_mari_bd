@@ -50,3 +50,13 @@ insert into disciplina ( nome, carga_horaria, professor_fk) values ("Artes", 2, 
 update disciplina set nome= "Front-end" where pk=3;
 
 select * from disciplina;
+
+insert into turma ( nome,sala) values ("2 téc", "14");
+insert into turma ( nome,sala) values ("1 téc", "12");
+insert into turma ( nome,sala) values ("3 téc", "15");
+insert into turma ( nome,sala) values ("2 exatas", "20");
+insert into turma ( nome,sala) values ("2 humanas", "24");
+
+update turma set nome= "3 B" where pk=3;
+
+select * from turma;
