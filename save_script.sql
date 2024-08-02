@@ -1,3 +1,5 @@
+/*drop database prova_bd;*/
+
 create database prova_bd;
 
 use prova_bd;
@@ -39,5 +41,12 @@ update professor set nome= "Fernanda" where pk=2;
 
 select * from professor;
 
-insert into disciplina ( nome,carga_horaria,professor_fk) values ("Física", "1", "2");
+insert into disciplina ( nome, carga_horaria, professor_fk) values ("Física", 1, 2);
+insert into disciplina ( nome, carga_horaria, professor_fk) values ("Matemática", 2, 1);
+insert into disciplina ( nome, carga_horaria, professor_fk) values ("Geografia", 4, 3);
+insert into disciplina ( nome, carga_horaria, professor_fk) values ("História", 3, 4);
+insert into disciplina ( nome, carga_horaria, professor_fk) values ("Artes", 2, 5);
 
+update disciplina set nome= "Front-end" where pk=3;
+
+select * from disciplina;
