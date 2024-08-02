@@ -30,9 +30,14 @@ create table horario(
 );
 
 insert into professor ( nome,cpf) values ("Fernanda", "123.456.789-00");
-insert into professor ( nome,cpf) values ("Jorge", "123.456.789-00");
-insert into professor ( nome,cpf) values ("Mateus", "123.456.789-00");
-insert into professor ( nome,cpf) values ("Jurema", "123.456.789-00");
-insert into professor ( nome,cpf) values ("Beatriz", "123.456.789-00");
+insert into professor ( nome,cpf) values ("Jorge", "014-615-639-09");
+insert into professor ( nome,cpf) values ("Mateus", "357-985-632-87");
+insert into professor ( nome,cpf) values ("Jurema", "654-987-428-90");
+insert into professor ( nome,cpf) values ("Beatriz", "145-458-783-33");
 
-update professor set (nome= "Jorge" where pk=2,
+update professor set nome= "Fernanda" where pk=2;
+
+select * from professor;
+
+insert into disciplina ( nome,carga_horaria,professor_fk) values ("Física", "1", "2");
+
