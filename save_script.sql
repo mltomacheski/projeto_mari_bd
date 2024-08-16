@@ -31,6 +31,7 @@ create table horario(
 	disciplina_fk int, foreign key(disciplina_fk) references disciplina(pk)
 );
 
+
 insert into professor ( nome,cpf) values ("Fernanda", "123.456.789-00");
 insert into professor ( nome,cpf) values ("Jorge", "014-615-639-09");
 insert into professor ( nome,cpf) values ("Mateus", "357-985-632-87");
@@ -38,6 +39,8 @@ insert into professor ( nome,cpf) values ("Jurema", "654-987-428-90");
 insert into professor ( nome,cpf) values ("Beatriz", "145-458-783-33");
 
 update professor set nome= "Fernanda" where pk=2;
+update professor set nome= "Jorge" where pk=4;
+update professor set nome= "Beatrisz" where pk=3;
 
 select * from professor;
 
@@ -48,6 +51,8 @@ insert into disciplina ( nome, carga_horaria, professor_fk) values ("História",
 insert into disciplina ( nome, carga_horaria, professor_fk) values ("Artes", 2, 5);
 
 update disciplina set nome= "Front-end" where pk=3;
+update disciplina set nome= "Geografia" where pk=2;
+update disciplina set nome= "Artes" where pk=4;
 
 select * from disciplina;
 
@@ -57,6 +62,20 @@ insert into turma ( nome,sala) values ("3 téc", "15");
 insert into turma ( nome,sala) values ("2 exatas", "20");
 insert into turma ( nome,sala) values ("2 humanas", "24");
 
-update turma set nome= "3 B" where pk=3;
+update turma set nome= "1 téc" where pk=3;
+update turma set nome= "2 exatas" where pk=2;
+update turma set nome= "2 humanas" where pk=1;
 
 select * from turma;
+
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-03-14", "1", 2, 3);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-04-30", "5", 1, 2);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-05-16", "1", 3, 1);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-07-10", "6", 4, 4);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-09-12", "2", 5, 3);
+
+update horario set dia_semana= "2022-06-22" where pk=1;
+update horario set dia_semana= "2024-09-14"where pk=2;
+update horario set dia_semana= "2024-02-21" where pk=4;
+
+select * from horario;
