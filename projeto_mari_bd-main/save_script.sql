@@ -30,15 +30,7 @@ create table horario(
 	turma_fk int, foreign key(turma_fk) references turma(pk),
 	disciplina_fk int, foreign key(disciplina_fk) references disciplina(pk)
 );
-insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-03-14", "1", 2, 3);
-insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-04-30", "5", 1, 2);
-insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-05-16", "1", 3, 1);
-insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-07-10", "6", 4, 4);
-insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-09-12", "2", 5, 3);
 
-update horario set nome= "dia_semana" where pk=1;
-
-select * from horario;
 
 insert into professor ( nome,cpf) values ("Fernanda", "123.456.789-00");
 insert into professor ( nome,cpf) values ("Jorge", "014-615-639-09");
@@ -70,4 +62,12 @@ update turma set nome= "3 B" where pk=3;
 
 select * from turma;
 
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-03-14", "1", 2, 3);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-04-30", "5", 1, 2);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-05-16", "1", 3, 1);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-07-10", "6", 4, 4);
+insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-09-12", "2", 5, 3);
 
+update horario set nome= "dia_semana" where pk=1;
+
+select * from horario;
