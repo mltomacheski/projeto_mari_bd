@@ -39,6 +39,8 @@ insert into professor ( nome,cpf) values ("Jurema", "654-987-428-90");
 insert into professor ( nome,cpf) values ("Beatriz", "145-458-783-33");
 
 update professor set nome= "Fernanda" where pk=2;
+update professor set nome= "Jorge" where pk=4;
+update professor set nome= "Beatrisz" where pk=3;
 
 select * from professor;
 
@@ -49,6 +51,8 @@ insert into disciplina ( nome, carga_horaria, professor_fk) values ("História",
 insert into disciplina ( nome, carga_horaria, professor_fk) values ("Artes", 2, 5);
 
 update disciplina set nome= "Front-end" where pk=3;
+update disciplina set nome= "Geografia" where pk=2;
+update disciplina set nome= "Artes" where pk=4;
 
 select * from disciplina;
 
@@ -58,7 +62,9 @@ insert into turma ( nome,sala) values ("3 téc", "15");
 insert into turma ( nome,sala) values ("2 exatas", "20");
 insert into turma ( nome,sala) values ("2 humanas", "24");
 
-update turma set nome= "3 B" where pk=3;
+update turma set nome= "1 téc" where pk=3;
+update turma set nome= "2 exatas" where pk=2;
+update turma set nome= "2 humanas" where pk=1;
 
 select * from turma;
 
@@ -68,6 +74,8 @@ insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values (
 insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-07-10", "6", 4, 4);
 insert into horario( dia_semana, posisao_aula, turma_fk, disciplina_fk) values ("2024-09-12", "2", 5, 3);
 
-update horario set nome= "dia_semana" where pk=1;
+update horario set dia_semana= "2022-06-22" where pk=1;
+update horario set dia_semana= "2024-09-14"where pk=2;
+update horario set dia_semana= "2024-02-21" where pk=4;
 
 select * from horario;
