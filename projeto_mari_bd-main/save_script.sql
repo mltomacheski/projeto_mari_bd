@@ -44,6 +44,8 @@ update professor set nome= "Beatrisz" where pk=3;
 
 select * from professor;
 
+delete from professor where pk= 3;
+
 insert into disciplina ( nome, carga_horaria, professor_fk) values ("Física", 1, 2);
 insert into disciplina ( nome, carga_horaria, professor_fk) values ("Matemática", 2, 1);
 insert into disciplina ( nome, carga_horaria, professor_fk) values ("Geografia", 4, 3);
@@ -55,6 +57,8 @@ update disciplina set nome= "Geografia" where pk=2;
 update disciplina set nome= "Artes" where pk=4;
 
 select * from disciplina;
+
+delete from disciplina where pk= 1;
 
 insert into turma ( nome,sala) values ("2 téc", "14");
 insert into turma ( nome,sala) values ("1 téc", "12");
@@ -68,6 +72,8 @@ update turma set nome= "2 humanas" where pk=1;
 
 select * from turma;
 
+delete from turma where pk=2;
+
 insert into horario( dia_semana, posicao_aula, turma_fk, disciplina_fk) values ("2024-03-14", "1", 2, 3);
 insert into horario( dia_semana, posicao_aula, turma_fk, disciplina_fk) values ("2024-04-30", "5", 1, 2);
 insert into horario( dia_semana, posicao_aula, turma_fk, disciplina_fk) values ("2024-05-16", "1", 3, 1);
@@ -79,3 +85,5 @@ update horario set dia_semana= "2024-09-14"where pk=2;
 update horario set dia_semana= "2024-02-21" where pk=4;
 
 select * from horario;
+
+delete from horario where pk=4;
